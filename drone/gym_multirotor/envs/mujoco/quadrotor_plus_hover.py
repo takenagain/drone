@@ -101,14 +101,15 @@ class QuadrotorPlusHoverEnv(UAVBaseEnv):
             "mujoco_qvel": self.mujoco_qvel,
         }
 
-        done = self.is_done(ob)
+        terminated = self.is_done(ob)
+        truncated = False
         if self.observation_noise_std:
             ob += np.random.uniform(
                 low=-self.observation_noise_std,
                 high=self.observation_noise_std,
                 size=ob.shape,
             )
-        return ob, reward, done, info
+        return ob, reward, terminated, truncated, info
 
     def _get_obs(self):
         """
