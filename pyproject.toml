@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "drone"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "1.26.4"
+gym = "^0.26.2"
+scipy = "^1.14.1"
+matplotlib = "^3.10.0"
+mujoco = "^3.2.6"
+pyyaml = "^6.0.2"
+stable-baselines3 = "^2.4.0"
+
+[tool.poetry.group.rocm.dependencies]
+tensorflow-rocm = {url = "https://repo.radeon.com/rocm/manylinux/rocm-rel-6.3/tensorflow_rocm-2.17.0-cp312-cp312-manylinux_2_28_x86_64.whl"}
+torchaudio = {url = "https://repo.radeon.com/rocm/manylinux/rocm-rel-6.3/torchaudio-2.4.0%2Brocm6.3.0-cp312-cp312-linux_x86_64.whl"}
+pytorch-triton-rocm = {url = "https://repo.radeon.com/rocm/manylinux/rocm-rel-6.3/pytorch_triton_rocm-3.0.0%2Brocm6.3.0.75cc27c26a-cp312-cp312-linux_x86_64.whl"}
+torchvision = {url = "https://repo.radeon.com/rocm/manylinux/rocm-rel-6.3/torchvision-0.19.0%2Brocm6.3.0-cp312-cp312-linux_x86_64.whl"}
+torch = {url = "https://repo.radeon.com/rocm/manylinux/rocm-rel-6.3/torch-2.4.0%2Brocm6.3.0-cp312-cp312-linux_x86_64.whl"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
