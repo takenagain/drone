@@ -1,5 +1,5 @@
-default: build run
-.PHONY: default build run
+default: run
+.PHONY: default run
 
 setup:
 	sudo apt install pipx
