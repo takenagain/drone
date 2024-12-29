@@ -1,6 +1,9 @@
 *.model
 venv
 
+# Ignore poetry.lock to allow for ROCm-based torch installations
+poetry.lock
+
 
 ### Python 
 # Byte-compiled / optimized / DLL files
